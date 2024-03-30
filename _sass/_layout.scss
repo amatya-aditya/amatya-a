@@ -58,6 +58,13 @@ body.sticky-bottom-footer {
   background-color: var(--global-container-color);
 }
 
+.resume-pdf {
+  display: block;
+  height: 750px !important;
+  padding-bottom: 30%;
+  overflow: hidden;
+}
+
 // Profile
 .profile {
   img {
