@@ -27,14 +27,25 @@ body.sticky-bottom-footer {
   padding-bottom: 0;
 }
 
+.mid-container {
+  max-width: $max-content-width;
+  box-shadow: 0px 0px 2px 0px #0404043d;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+}
+
 .container {
   max-width: $max-content-width;
+  margin: 0 auto;
 }
 
 // Profile
 .profile {
   img {
-    width: 100%;
+    width: 70%;
   }
 }
 

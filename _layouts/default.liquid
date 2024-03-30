@@ -21,7 +21,7 @@
     {% include header.liquid %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="mid-container mt-2" role="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">
@@ -48,7 +48,7 @@
     </div>
 
     <!-- Footer -->
-    {% include footer.liquid %}
+
 
     <!-- JavaScripts -->
     {% include scripts/jquery.liquid %}
@@ -68,5 +68,7 @@
     {% include scripts/progressBar.liquid %}
     {% include scripts/wechatModal.liquid %}
     {% include scripts/imageLayouts.liquid %}
+    {% include scripts/filtering.html %}
+
   </body>
 </html>
