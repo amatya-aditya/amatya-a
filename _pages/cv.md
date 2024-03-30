@@ -23,12 +23,12 @@ description: This is a description of the page. You can modify it in '_pages/cv.
 
 
 <div class="resume-pdf">
-    <object data="{{ site.url }}{{ site.baseurl }}/assets/pdf/CV_Aditya_Amatya.pdf" width="100%" height="825" type="application/pdf"></object>
+    <object data="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" width="100%" height="825" type="application/pdf"></object>
 </div>
 
-<iframe class="resume-pdf"  
+<!-- <iframe class="resume-pdf"  
     width="100%" 
     height="825" 
-    src="/assets/pdf/CV_Aditya_Amatya.pdf"> 
-</iframe> 
+    src="{{ site.url }}{{ site.baseurl }}/assets/pdf/CV_Aditya_Amatya.pdf"> 
+</iframe>  -->
 
