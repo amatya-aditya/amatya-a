@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://amatya-aditya.github.io/friendly-lamp/sitemap.xml
+Sitemap: https://amatya-aditya.github.io/sitemap.xml
