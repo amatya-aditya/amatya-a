@@ -444,11 +444,15 @@ ul.task-list input[type="checkbox"] {
 
 // Footer
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
+  background-color: var(--global-container-color);
   font-size: 0.75rem;
+  max-width:  $max-content-width;
+  margin: 0 auto;
+  
+
 
   .container {
-    color: var(--global-footer-text-color);
+    color: var(--global-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
