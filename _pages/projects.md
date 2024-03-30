@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: A growing collection of my projects.
 nav: true
 nav_order: 3
-display_categories: [work1, fun1, work2]
+display_categories: [Undergraduate, Python, Mini]
 horizontal: false
 ---
 
@@ -36,5 +36,5 @@ horizontal: false
   {%- assign sorted_projects = site.projects | sort: "importance" | reverse %}
   <!-- Generate cards for each project -->
     
-      {% include projects.html %}
+      {% include projects.liquid %}
 </div>

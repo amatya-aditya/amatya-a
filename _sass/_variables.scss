@@ -21,6 +21,8 @@ $light-purple-color: lighten($purple-color, 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
+$teal-color:  #14A5A6 !default;
+$light-teal-color: lighten($teal-color, 25%);
 
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%);
@@ -30,9 +32,9 @@ $grey-900: #212529;
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-$container-light-color: #ffffff !default;
-$nav-light-color: #ffffff !default;
-$bg-light-color: #f7f7f7 !default;
+$container-light-color: #e8e8e8 !default;
+$nav-light-color: #e8e8e8 !default;
+$bg-light-color: #d7d3d3 !default;
 
 $container-dark-color: #202020 !default;
 $nav-dark-color: #202020 !default;
