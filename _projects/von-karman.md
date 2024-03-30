@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Von Kármán vortex
 img: assets/images/ansys-simulation/vonKarman/vonKarman2.gif
 video: assets/images/ansys-simulation/vonKarman/vonKarman-2.mp4
@@ -15,16 +15,20 @@ tags:
 
 code:
  - 2L1
+images:
+  compare: true
+  slider: true
+pdf: vonKarman.gif
 ---
 
 During this project, the fluid flow over cylinder was observed at different Reynolds number ranging from 5 to 3.5e6. The effect of Reynolds number was analysed to observe the behavior of von karman street over different flow regimes.
 
 ## Visualization of Von Karman Effect
 
-
-<div>
-<object data="{{ site.url }}{{ site.baseurl }}/images/ansys-simulation/vonKarman/vonKarman.gif" width="100%" height="100%" type="image/gif"></object>
+<div style="text-align:center;">
+    <object data="{{ page.pdf | prepend: 'assets//images/ansys-simulation/vonKarman/' | relative_url}}" text-align="center"  type="application/pdf"></object>
 </div>
+
 
 
 ## Von-Karman Effect

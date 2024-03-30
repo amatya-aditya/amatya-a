@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Jansen's Linkage  
 img: assets/images/projects/theoJansen/theoJansen2.gif
 description: The work was intended to mimic the walking motion of the animal. This project was submitted as a partial fulfillment for Theory of Machines class. 
@@ -8,7 +8,10 @@ categories:
   - Undergraduate
   - mechanism 
 tags:
- - mechanism
+ - Kinematics
+images:
+  compare: true
+  slider: true
 ---
 
 ## Jansen's Linkage

@@ -16,11 +16,15 @@
 	<section class="card-container">
 		<div class="grid-container">
       {%- for project in sorted_projects -%}
+      
+
         <div class="blog-card">
+        
 					<div class="blog-category">
             {% for category in project.categories %}  <a> {{ category }}</a> {% endfor %}
           </div>
 					<div class="card-header">
+          <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">  
             {% if project.img %}
         {%
           include figure.liquid
@@ -30,27 +34,25 @@
           alt="project thumbnail"
         %}
       {% endif %}
-
+      </a>
           </div>
 					<div class="card-main">
-              <h5 style="font-weight: 500;">{{ project.title }}</h5>
+              <h5 style="font-weight: 500;">
+              <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}"> 
+                {{ project.title }}
+                </a>
+                </h5>
               <p>{{ project.description | strip_html | truncate: 200  }}</p>
-              
-          </div>
 
+          </div>
           <div class="card-bottom">
             <span class="tag tag-teal">{{project.tags}}</span>
-
           </div>
-
-            
-
-            
+         
           </div>
         {%- endfor %}							
-			
-			
-		</div>
+        
+        </div>
 	</section>
 
   <button class="show-more btn">View More</button>

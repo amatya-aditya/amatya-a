@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: 2D Mohr's Circle
 description: Mohr's Circle is a valuable tool in material mechanics that visualizes stress components in a material subjected to loads.
 img: assets/images/python/2dmohrscircle.png
@@ -9,7 +9,9 @@ related_publications: true
 tags:
  - Solid Mechanics
 date:  2022-02-18
-
+images:
+  compare: true
+  slider: true
 ---
 
 Understanding stress and strain in materials is crucial in various engineering disciplines. Mohr's Circle, a graphical representation, helps visualize stress components within materials. 
