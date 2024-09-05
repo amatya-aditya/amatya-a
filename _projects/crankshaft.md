@@ -21,7 +21,7 @@ images:
 
 ## Design and Structural Analysis of Crankshaft
 
-<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true"></swiper-container>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
     <swiper-slide>{% include figure.liquid loading="eager" path="assets/images/ansys-simulation/crankshaft/model.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
     <swiper-slide>{% include figure.liquid loading="eager" path="assets/images/ansys-simulation/crankshaft/meshing.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
     <swiper-slide>{% include figure.liquid loading="eager" path="assets/images/ansys-simulation/crankshaft/forged-steel-1.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>

@@ -12,13 +12,15 @@ date:  2022-02-18
 images:
   compare: true
   slider: true
+asset: 2d-mohrs-circle.gif
 ---
 
 Understanding stress and strain in materials is crucial in various engineering disciplines. Mohr's Circle, a graphical representation, helps visualize stress components within materials. 
 
-<div>
-<object data="{{ site.url }}{{ site.baseurl }}/images/python/2d-mohrs-circle.gif" width="100%" height="100%" type="image/gif"></object>
+<div style="text-align:center;">
+    <object data="{{ page.asset | prepend: 'assets//images/python/' | relative_url}}" text-align="center" width="100%" height="100%" type="image/gif"></object>
 </div>
+
 
 ```python
 # -*- coding: utf-8 -*-

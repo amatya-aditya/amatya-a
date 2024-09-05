@@ -38,10 +38,20 @@ $bg-light-color: #d7d3d3 !default;
 
 $container-dark-color: #202020 !default;
 $nav-dark-color: #202020 !default;
-$bg-dark-color: #313030 !default;
+$bg-dark-color: #292929 !default;
+
+$light-text-color: #222222 !default;
+$dark-text-color: #cacaca !default;
+
+
+// Blog Card Colors
+$blog-card-head-bg-light-color: #c0c0c063 !default;
+$blog-card-head-bg-dark-color: #3e3e3e !default;
+
+$tag-light-color: #b6b6b691 !default;
+$tag-dark-color: #292929e3 !default;
 
 // Theme colors
-
 $code-bg-color-light: rgba($purple-color, 0.05);
 $code-bg-color-dark: #2c3237 !default;
 

@@ -5,7 +5,7 @@
 :root {
   // --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  --global-text-color: #{$light-text-color};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$teal-color};
   --global-hover-color: #{$teal-color};
@@ -21,6 +21,8 @@
   --global-nav-color: #{$nav-light-color};
   --global-bg-color: #{$bg-light-color};
 
+  --global-blog-card-color: #{$blog-card-head-bg-light-color};
+  --global-tag-color: #{$tag-light-color};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -55,7 +57,7 @@
 html[data-theme="dark"] {
   // --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
+  --global-text-color: #{$dark-text-color};
   --global-text-color-light: #{$grey-color-light};
   --global-theme-color: #{$teal-color};
   --global-hover-color: #{$teal-color};
@@ -70,6 +72,9 @@ html[data-theme="dark"] {
   --global-container-color: #{$container-dark-color};
   --global-nav-color: #{$nav-dark-color};
   --global-bg-color: #{$bg-dark-color};
+
+  --global-blog-card-color: #{$blog-card-head-bg-dark-color};
+  --global-tag-color: #{$tag-dark-color};
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

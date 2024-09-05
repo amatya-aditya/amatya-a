@@ -1,0 +1,28 @@
+
+<section class="card-container">
+		<div class="grid-container">
+      {%- for research in sorted_research -%}
+      
+
+        <div class="blog-card-head">
+        <div class="blog-category">
+            {% for category in research.categories %}  <a> {{ category }}</a> {% endfor %}
+          </div>
+				
+				
+					<div class="card-head">
+              <p style="font-weight: 500;">
+              <a href="{% if research.redirect %}{{ research.redirect }}{% else %}{{ research.url | relative_url }}{% endif %}"> 
+                {{ research.title }}
+                </a>
+                </p>
+          </div>
+          </div>
+        {%- endfor %}							
+        
+        </div>
+	</section>
+
+  <button class="show-more btn">View More</button>
+  <a class="top" href="#">Back to Top</a>
+

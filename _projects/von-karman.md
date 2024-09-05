@@ -18,7 +18,7 @@ code:
 images:
   compare: true
   slider: true
-pdf: vonKarman.gif
+asset: vonKarman.gif
 ---
 
 During this project, the fluid flow over cylinder was observed at different Reynolds number ranging from 5 to 3.5e6. The effect of Reynolds number was analysed to observe the behavior of von karman street over different flow regimes.
@@ -26,7 +26,7 @@ During this project, the fluid flow over cylinder was observed at different Reyn
 ## Visualization of Von Karman Effect
 
 <div style="text-align:center;">
-    <object data="{{ page.pdf | prepend: 'assets//images/ansys-simulation/vonKarman/' | relative_url}}" text-align="center"  type="application/pdf"></object>
+    <object data="{{ page.asset | prepend: 'assets//images/ansys-simulation/vonKarman/' | relative_url}}" text-align="center" width="100%" height="100%"  type="image/gif"></object>
 </div>
 
 
@@ -36,12 +36,22 @@ In fluid dynamics, Von karman effect is a common vortex effect in which there is
 
 ## Calculation of the Reynolds Number
 
-$$ Density ~ of~  air (\rho ) = 1.225 ~ kg/m^3 $$ 
-$$ \\ Kinematic ~ viscosity ~ of~  air (\mu)  = 1.4607^{-5} ~ m^2/s$$
-$$ \\ Characteristic ~ length  = L =Diameter ~ of ~ Cylinder  = 200 ~ mm$$
-$$ \\ Reynolds ~ Number  = Re = \frac{\rho \times V \times L}{\mu} \approx 16773 \times v$$
+<div style="width=100%;height=100%;"> 
 
-Here, The velocity used in the simulation was $$ 0.156 m/s $$ which results in the Reynolds number $$\approx 2617$$.
+$$ Density ~ of~  air (\rho ) = 1.225 ~ kg/m^3 $$ 
+$$ \\ Kinematic ~ viscosity ~ of~  air (\mu)  $$
+$$ \\ = 1.4607^{-5} ~ m^2/s $$
+$$ \\ Characteristic ~ length (L)  $$ 
+$$\\= Dia. ~ of ~ Cylinder $$ 
+$$\\ = 200 ~ mm$$
+$$ \\ Reynolds ~ Number (Re) = \frac{\rho \times V \times L}{\mu} $$
+$$\\ \approx 16773 \times v$$
+
+Here, The velocity used in the simulation was $$ 0.156 m/s $$ which results in the Reynolds number $$\approx 2617.$$
+  
+
+</div>
+
 
 
 <h3> Undergoing Project: Details coming soon</h3>

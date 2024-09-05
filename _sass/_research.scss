@@ -6,6 +6,7 @@
     gap: 15px;
     padding: 0;
     list-style-type: none;
+    padding-left: 0;
   }
   /* Define list item class for each research interest */
   .research-interests li {
@@ -26,10 +27,18 @@
 
   .research {
     border-radius: 20px;
-    // background: #12dbd11f;
-    background: #4548481f;
+    // background: rgba(2, 186, 161, 0.24);
+    background: var(--global-tag-color);
     width: fit-content;
     padding-right: 10px;
     padding-left: 10px;
-    font-weight: 600;
+    font-weight: 400;
   }
+
+
+
+
+
+.profile img {
+  transition: filter 0.5s; /* Add transition for smooth effect */
+}
