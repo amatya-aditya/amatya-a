@@ -6,6 +6,9 @@
 // Dimensions
 $max-content-width: {{ site.max_width }};
 
+@use "research_notes";
+@use "chapter_nav";
+
 @import
   "variables",
   "themes",
