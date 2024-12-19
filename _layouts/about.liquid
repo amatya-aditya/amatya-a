@@ -32,9 +32,6 @@ layout: default
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
             cache_bust=true
           %}
-
-      
-
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -44,6 +41,18 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <hr>
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h3  style="color: inherit;text-decoration: underline;font-weight: 400;">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+      </h3>
+      {% include selected_papers.liquid %}
+    {% endif %} 
+
+    <hr>
+
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h3  style="color: inherit;text-decoration: underline;font-weight: 400;">
@@ -51,6 +60,18 @@ layout: default
       </h3>
       {% include news.liquid limit=true %}
     {% endif %}
+
+    <hr>
+
+    <!-- Latest Notes -->
+    {% if site.latest_notes.enabled %}
+      <h3  style="color: inherit;text-decoration: underline;font-weight: 400;">
+        <a href="{{ '/research-notes/' | relative_url }}" style="color: inherit">Latest Notes</a>
+      </h3>
+      {% include latest_notes.liquid %}
+    {% endif %}
+
+    <hr>
 
     <!-- Latest posts -->
     {% if site.latest_posts.enabled %}
@@ -60,13 +81,7 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers %}
-      <h3  style="color: inherit;text-decoration: underline;font-weight: 400;">
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
-      </h3>
-      {% include selected_papers.liquid %}
-    {% endif %}
+    <hr>
 
     <!-- Social -->
     {% if page.social %}

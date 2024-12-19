@@ -4,7 +4,7 @@ title: 2D Mohr's Circle
 description: Mohr's Circle is a valuable tool in material mechanics that visualizes stress components in a material subjected to loads.
 img: assets/images/python/2dmohrscircle.png
 importance: 1
-category: Python, computational mechanics, programming
+category: Mathematics, computational mechanics, programming
 related_publications: true
 tags:
  - Solid Mechanics
@@ -12,28 +12,21 @@ date:  2022-02-18
 images:
   compare: true
   slider: true
-asset: 2d-mohrs-circle.gif
 ---
 
 Understanding stress and strain in materials is crucial in various engineering disciplines. Mohr's Circle, a graphical representation, helps visualize stress components within materials. 
 
-<div style="text-align:center;">
-    <object data="{{ page.asset | prepend: 'assets//images/python/' | relative_url}}" text-align="center" width="100%" height="100%" type="image/gif"></object>
+<div>
+<object data="{{ site.url }}{{ site.baseurl }}/images/python/2d-mohrs-circle.gif" width="100%" height="100%" type="image/gif"></object>
 </div>
 
-
 ```python
-# -*- coding: utf-8 -*-
-"""
-@author: A Aditya
-"""
 
 import PySimpleGUI as sg
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 
-# Function to create Mohr's Circle
 def create_mohrs_circle(sigma_x, sigma_y, tau_xy):
     center = (sigma_x + sigma_y) / 2
     radius = np.sqrt(((sigma_x - sigma_y) / 2) ** 2 + tau_xy ** 2)
@@ -45,7 +38,6 @@ def create_mohrs_circle(sigma_x, sigma_y, tau_xy):
 
     return x, y, center, radius
 
-# GUI Layout
 layout = [
     [sg.Text('Sigma X'), sg.Slider((-100, 100), default_value=50, orientation='h', size=(20, 10), key='-SIGMAX-'),
      sg.Text('Sigma Y'), sg.Slider((-100, 100), default_value=20, orientation='h', size=(20, 10), key='-SIGMAY-'),
@@ -56,63 +48,55 @@ layout = [
     
 ]
 
-# Create the window
 window = sg.Window('Mohr\'s Circle', layout, finalize=True)
 
-# Create initial Mohr's Circle data
 sigma_x = 50
 sigma_y = 20
 tau_xy = 10
 x, y, center, radius = create_mohrs_circle(sigma_x, sigma_y, tau_xy)
-sigma_1 = center + radius    # maximum principal stress
-sigma_2 = center - radius    # minimum principal stress
+sigma_1 = center + radius  
+sigma_2 = center - radius  
 
-# Create initial Mohr's Circle plot
 fig, ax = plt.subplots(figsize=(4, 4), facecolor='#40516c')
 ax.set_xlim(center - 60, center + 60)
 ax.set_ylim(-radius - 10, radius + 10)
 ax.grid(True)
 
-# Draw the initial Mohr's Circle plot on the canvas
 fig_canvas_agg = FigureCanvasTkAgg(fig, window['-CANVAS-'].TKCanvas)
 fig_canvas_agg.draw()
 fig_canvas_agg.get_tk_widget().pack(side='top', fill='both', expand=1)
 
-# Event loop
 while True:
     event, values = window.read(timeout=100)
 
     if event == sg.WIN_CLOSED:
         break
 
-    # Retrieve values from sliders
     sigma_x = values['-SIGMAX-']
     sigma_y = values['-SIGMAY-']
     tau_xy = values['-TAUXY-']
 
-    # Create updated Mohr's Circle
     x, y, center, radius = create_mohrs_circle(sigma_x, sigma_y, tau_xy)
 
-    # Update Mohr's Circle plot
     ax.clear()
     ax.plot(x, y, color='black')
-    ax.plot([sigma_x, sigma_y], [-tau_xy, tau_xy], 'ko')  # Points σ1, σ2
-    ax.plot(center, 0, 'ko')  # Point c (Center)
-    ax.plot([sigma_1, sigma_2], [0, 0], 'ko')  # Points max principal stress and min principal stress
-    ax.plot([center, center], [radius, -radius], 'ko')  # Points max principal stress and min principal stress
-    ax.text(sigma_x, -tau_xy, 'σx, -τxy', ha='right', va='bottom', color='black', fontsize=9)  # Label for σ1
-    ax.text(sigma_y, tau_xy, 'σy, τxy', ha='right', va='top', color='black', fontsize=9)  # Label for σ2
-    ax.text(sigma_1, 0, f" σ1 = {sigma_1:.2f}", ha='right', va='bottom', color='black', fontsize=9)  # Max Principal Stress
-    ax.text(sigma_2, 0, f" σ2 = {sigma_2:.2f}", ha='left', va='top', color='black', fontsize=9)  # Min Principal Stress
-    ax.text(center, radius, f" τmax = {radius:.2f}", ha='right', va='bottom', color='black', fontsize=9)  # Max Shear Stress
-    ax.text(center, -radius, f" τmin = {-radius:.2f}", ha='right', va='bottom', color='black', fontsize=9)  # Min Shear Stress
-    ax.text(center, 0, f" C ({center:.2f}, 0)", ha='left', va='top', color='black', fontsize=9)  # Point c
+    ax.plot([sigma_x, sigma_y], [-tau_xy, tau_xy], 'ko')  
+    ax.plot(center, 0, 'ko')  
+    ax.plot([sigma_1, sigma_2], [0, 0], 'ko')   
+    ax.plot([center, center], [radius, -radius], 'ko')  
+    ax.text(sigma_x, -tau_xy, 'σx, -τxy', ha='right', va='bottom', color='black', fontsize=9)  
+    ax.text(sigma_y, tau_xy, 'σy, τxy', ha='right', va='top', color='black', fontsize=9)  
+    ax.text(sigma_1, 0, f" σ1 = {sigma_1:.2f}", ha='right', va='bottom', color='black', fontsize=9)  
+    ax.text(sigma_2, 0, f" σ2 = {sigma_2:.2f}", ha='left', va='top', color='black', fontsize=9)  
+    ax.text(center, radius, f" τmax = {radius:.2f}", ha='right', va='bottom', color='black', fontsize=9)  
+    ax.text(center, -radius, f" τmin = {-radius:.2f}", ha='right', va='bottom', color='black', fontsize=9)  
+    ax.text(center, 0, f" C ({center:.2f}, 0)", ha='left', va='top', color='black', fontsize=9)  #
 
-    # Shade region between the lines and x-axis
+   
     ax.fill_between([sigma_x, sigma_y, center], [-tau_xy, tau_xy, 0], color='lightgreen', alpha=0.5)
     ax.fill_between([sigma_y, sigma_x, center], [tau_xy, -tau_xy, 0], color='lightgreen', alpha=0.5)
 
-    # Draw lines connecting the points to the x-axis
+    
     ax.plot([sigma_x, sigma_x], [-tau_xy, 0], 'k-')
     ax.plot([sigma_y, sigma_y], [tau_xy, 0], 'k-')
     ax.plot([center, center], [0, 0], 'k--')
@@ -121,8 +105,6 @@ while True:
     ax.plot([sigma_x, sigma_y], [-tau_xy, tau_xy], 'k-')
 
 
-
-    # Calculate and display the angle covered by the line from x-axis
     angle_rad = (np.arctan((2 * tau_xy) / (sigma_x - sigma_y)))/2
     angle_deg = np.degrees(angle_rad)
     ax.text(center - 8, 2, f'θₚ₂: {angle_deg:.2f}°', color='black')
@@ -134,7 +116,6 @@ while True:
     ax.set_facecolor('#40516c')
     
     plt.tight_layout()
-    # Update Mohr's Circle table with principal stresses
     sigma_1 = center + radius
     sigma_2 = center - radius
     max_shear_stress = (sigma_1 - sigma_2) / 2
@@ -148,7 +129,7 @@ while True:
                   ]
     window['-TABLE-'].update(values=table_data)
 
-    # Convert updated plot to a format that PySimpleGUI can display
+   
     fig_canvas_agg.draw_idle()
 
 window.close()

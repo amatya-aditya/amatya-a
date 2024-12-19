@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Lead CAE Engineer</a>. Yatri Motorcycles. Kathmandu. Nepal
+subtitle: <a href='#'>Graduate Research Assistant</a>.  Auburn University.  Auburn. AL.  USA
 
 profile:
   align: right

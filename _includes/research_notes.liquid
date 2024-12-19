@@ -1,28 +1,21 @@
-
-<section class="card-container">
-		<div class="grid-container">
-      {%- for research in sorted_research -%}
-      
-
-        <div class="blog-card-head">
+<section>
+  <ul class="kanban">
+    {%- for research in sorted_research -%}
+        <li class="blog-card-head kanban-item">
         <div class="blog-category">
             {% for category in research.categories %}  <a> {{ category }}</a> {% endfor %}
-          </div>
-				
-				
-					<div class="card-head">
-              <p style="font-weight: 500;">
-              <a href="{% if research.redirect %}{{ research.redirect }}{% else %}{{ research.url | relative_url }}{% endif %}"> 
-                {{ research.title }}
-                </a>
-                </p>
-          </div>
-          </div>
-        {%- endfor %}							
-        
         </div>
-	</section>
+					<div class="card-head">
+              <a href="{% if research.redirect %}{{ research.redirect }}{% else %}{{ research.url | relative_url }}{% endif %}"> 
+                 {{ research.title }}
+              </a>
+          </div>
+          </li>
+        {%- endfor %}
+  </ul>
+</section>
 
-  <button class="show-more btn">View More</button>
-  <a class="top" href="#">Back to Top</a>
+
+
+ <a class="top" href="#">Back to Top</a>
 

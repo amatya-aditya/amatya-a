@@ -19,10 +19,12 @@ font-weight: 500;
 }
 
 .btn-primary {
-  background-color: rgba(179, 179, 179, 0.16) !important;
-  color: #000;
+  background-color: var(--global-primary-btn-bg-color) !important;
+  color: var(--global-primary-btn-font-color) !important;
   font-size: 12px !important;
   font-weight: 500;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0,0,0,0.16),0 2px 1px 0 rgba(0,0,0,0.12);
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.16),0 2px 1px 0 rgba(0,0,0,0.12);
 }
 
 .btn-primary:hover {
@@ -31,12 +33,12 @@ font-weight: 500;
 
 .btn-primary:not([disabled]):not(.disabled).active {
     background-color: var(--global-theme-color) !important;
-    color: #000;
+    color: #000 !important;;
   }
 
 .btn-primary:not([disabled]):not(.disabled):active, .btn-primary:not([disabled]):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
     background-color: var(--global-theme-color) !important;
     -webkit-box-shadow: none;
     box-shadow: none;
-    color: #000;
+    color: #000 !important;;
   }

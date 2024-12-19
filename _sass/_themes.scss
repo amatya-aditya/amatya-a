@@ -21,7 +21,10 @@
   --global-nav-color: #{$nav-light-color};
   --global-bg-color: #{$bg-light-color};
 
-  --global-blog-card-color: #{$blog-card-head-bg-light-color};
+  --global-blog-card-bg-color: #{$blog-card-head-bg-light-color};
+  --global-blog-card-font-color: #{$blog-card-head-font-light-color};
+  --global-primary-btn-bg-color: #{$blog-card-head-bg-light-color};
+  --global-primary-btn-font-color: #{$blog-card-head-font-light-color};
   --global-tag-color: #{$tag-light-color};
 
   --global-tip-block: #42b983;
@@ -73,7 +76,10 @@ html[data-theme="dark"] {
   --global-nav-color: #{$nav-dark-color};
   --global-bg-color: #{$bg-dark-color};
 
-  --global-blog-card-color: #{$blog-card-head-bg-dark-color};
+  --global-blog-card-bg-color: #{$blog-card-head-bg-dark-color};
+  --global-blog-card-font-color: #{$blog-card-head-font-dark-color};
+  --global-primary-btn-bg-color: #{$blog-card-head-bg-dark-color};
+  --global-primary-btn-font-color: #{$blog-card-head-font-dark-color};
   --global-tag-color: #{$tag-dark-color};
 
   --global-tip-block: #42b983;

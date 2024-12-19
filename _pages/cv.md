@@ -1,14 +1,13 @@
 ---
-layout: default
+layout: page
 permalink: /cv/
 title: CV
 nav: true
 nav_order: 2
 cv_pdf: CV_Aditya_Amatya.pdf
-description: This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button. Use cv as layout for customized cv page and edit the cv.yml
-
+description: 
 ---
-
+<!--This is a description of the page. You can modify it in '_pages/cv.md'. You can also change or remove the top pdf download button. Use cv as layout for customized cv page and edit the cv.yml  -->
 
 <!-- <embed src="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" width="500" height="60075" type="application/pdf"> -->
 

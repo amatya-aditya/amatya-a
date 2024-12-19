@@ -12,6 +12,7 @@ let setTheme = (theme) => {
   transTheme();
   setHighlight(theme);
   setGiscusTheme(theme);
+  setSearchTheme(theme);
 
   // if mermaid is not defined, do nothing
   if (typeof mermaid !== "undefined") {
@@ -176,6 +177,17 @@ let setVegaLiteTheme = (theme) => {
   });
 };
 
+let setSearchTheme = (theme) => {
+  const ninjaKeys = document.querySelector("ninja-keys");
+  if (!ninjaKeys) return;
+
+  if (theme === "dark") {
+    ninjaKeys.classList.add("dark");
+  } else {
+    ninjaKeys.classList.remove("dark");
+  }
+};
+
 let transTheme = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
@@ -203,3 +215,4 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleTheme(localStorage.getItem("theme"));
   });
 });
+

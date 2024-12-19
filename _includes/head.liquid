@@ -125,3 +125,43 @@
 {% if page.tikzjax %}
   <link defer rel="stylesheet" type="text/css" href="https://tikzjax.com/v1/fonts.css">
 {% endif %}
+
+<!-- Photoswipe -->
+  {% if page.images.photoswipe %}
+    <link
+      defer
+      rel="stylesheet"
+      href="{{ site.third_party_libraries.photoswipe.url.css }}"
+      crossorigin="anonymous"
+    >
+  {% endif %}
+  <!-- Image slider -->
+  {% if page.images.slider %}
+    <link
+      defer
+      rel="stylesheet"
+      href="{{ site.third_party_libraries.swiper.url.css }}"
+      integrity="{{ site.third_party_libraries.swiper.integrity.css }}"
+      crossorigin="anonymous"
+    >
+  {% endif %}
+  <!-- Spotlight -->
+  {% if page.images.spotlight %}
+    <link
+      defer
+      rel="stylesheet"
+      href="{{ site.third_party_libraries.spotlight.url.css }}"
+      integrity="{{ site.third_party_libraries.spotlight.integrity.css }}"
+      crossorigin="anonymous"
+    >
+  {% endif %}
+  <!-- Venobox -->
+  {% if page.images.venobox %}
+    <link
+      defer
+      rel="stylesheet"
+      href="{{ site.third_party_libraries.venobox.url.css }}"
+      integrity="{{ site.third_party_libraries.venobox.integrity.css }}"
+      crossorigin="anonymous"
+    >
+  {% endif %}

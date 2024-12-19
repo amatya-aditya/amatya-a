@@ -16,11 +16,14 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
+    gem 'jekyll-regex-replace'
+    gem 'jekyll-tabs'
     gem 'mini_racer'
     gem 'unicode_utils'
     gem 'webrick'
 end
 group :other_plugins do
+    gem 'css_parser'
     gem 'feedjira'
     gem 'httparty'
 end

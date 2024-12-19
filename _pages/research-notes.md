@@ -6,7 +6,6 @@ description:
 nav: true
 nav_order: 4
 display_categories: [Mathematics, Solid Mechanics, Numerical Methods, Fracture Mechanics, Finite Element Methods]
-horizontal: false
 ---
 
 <!-- pages/projects.md -->
@@ -24,7 +23,7 @@ horizontal: false
       {%- for category in page.display_categories %}
         <a class="category-link btn btn-sm btn-primary" data-category=".{{category | downcase}}" href="#">{{category | replace: "-", " "}}</a>
       {%- endfor %}
-      <a class=" all-link btn btn-sm btn-primary active" href="#">All</a>
+      <a class=" all-link btn btn-sm btn-primary active" href="#">All</a> 
   </div>
 </div>
   {%- endif -%}
